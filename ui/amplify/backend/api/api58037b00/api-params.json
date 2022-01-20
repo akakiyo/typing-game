@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/graphql",
+            "lambdaFunction": "typinggame0b45ac81",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/graphql"
+        }
+    ],
+    "resourceName": "api58037b00",
+    "apiName": "api58037b00",
+    "functionArns": [
+        {
+            "lambdaFunction": "typinggame0b45ac81"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-typinggame-dev-94102-authRole",
+        "unAuthRoleName": "amplify-typinggame-dev-94102-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "typinggame0b45ac81",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

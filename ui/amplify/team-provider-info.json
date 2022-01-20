@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-typinggame-dev-94102-authRole",
+      "UnauthRoleArn": "arn:aws:iam::665577144923:role/amplify-typinggame-dev-94102-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::665577144923:role/amplify-typinggame-dev-94102-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-typinggame-dev-94102-deployment",
+      "UnauthRoleName": "amplify-typinggame-dev-94102-unauthRole",
+      "StackName": "amplify-typinggame-dev-94102",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:665577144923:stack/amplify-typinggame-dev-94102/f9a37f60-7638-11eb-88b7-06dc4f4916a2",
+      "AmplifyAppId": "d3udk40v7exz6c"
+    },
+    "categories": {
+      "function": {
+        "typinggame0b45ac81": {
+          "deploymentBucketName": "amplify-typinggame-dev-94102-deployment",
+          "s3Key": "amplify-builds/typinggame0b45ac81-743657665361454c5470-build.zip"
+        }
+      }
+    }
+  }
+}

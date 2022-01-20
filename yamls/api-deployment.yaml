@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-api
+  labels:
+    app: go-api
+spec:
+  type: NodePort
+  ports:
+  - port: 8080 
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: go-api
+
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: go-api
+  name: go-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: go-api
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: go-api
+    spec:
+      containers:
+        - image: docker.io/kiyo0328/go-api:v1
+          name: go-api
+          imagePullPolicy: Always
+          resources: {}
+          ports:
+            - containerPort: 8080
+status: {}

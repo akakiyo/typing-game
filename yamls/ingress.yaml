@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ns-typing
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+spec:
+  rules: 
+  - host: kiyo.com
+    http: 
+      paths:
+      - path: /(.*)
+        pathType: Exact
+        backend: 
+          service:
+            name: typing-game
+            port:
+              number: 3000
+      - path: /go-api/(.*)
+        pathType: Exact
+        backend: 
+          service:
+            name: go-api
+            port:
+              number: 8080
+      - path: /apigateway/(.*)
+        pathType: Exact
+        backend: 
+          service:
+            name: apigateway
+            port:
+              number: 4000
